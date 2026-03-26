@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Prathyusha Mekala | EIT, PhD – Petroleum & Flow Assurance Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0b1626;
+    --navy-mid: #112240;
+    --navy-light: #1a3357;
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --gold-pale: #f5e6b8;
+    --off-white: #f0ede8;
+    --text-main: #e8e4dc;
+    --text-muted: #8a9bb5;
+    --text-dim: #5a6b82;
+    --border: rgba(201,168,76,0.2);
+    --border-subtle: rgba(138,155,181,0.15);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--navy);
+    color: var(--text-main);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(11,22,38,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 64px;
+  }
+  .nav-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: var(--gold);
+    letter-spacing: 0.04em;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  .nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color 0.25s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: auto;
+    display: flex;
+    align-items: center;
+    padding: 20px 5% 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 70% 40%, rgba(201,168,76,0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 50% at 20% 80%, rgba(17,34,64,0.8) 0%, transparent 70%);
+  }
+  .hero-lines {
+    position: absolute;
+    top: 0; right: 0;
+    width: 45%;
+    height: 100%;
+    opacity: 0.04;
+    background-image:
+      repeating-linear-gradient(90deg, var(--gold) 0, var(--gold) 1px, transparent 1px, transparent 60px),
+      repeating-linear-gradient(0deg, var(--gold) 0, var(--gold) 1px, transparent 1px, transparent 60px);
+  }
+  .hero-content {
+    position: relative;
+    max-width: 820px;
+    animation: fadeUp 1s ease both;
+  }
+  .hero-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .hero-label::before {
+    content: '';
+    display: inline-block;
+    width: 36px;
+    height: 1px;
+    background: var(--gold);
+  }
+  .hero-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 4.5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--off-white);
+    margin-bottom: 0.5rem;
+    white-space: nowrap;
+  }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1rem, 2vw, 1.35rem);
+    font-weight: 400;
+    color: var(--gold-light);
+    margin-bottom: 1.8rem;
+    font-style: italic;
+  }
+  .hero-bio {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.8;
+    max-width: 640px;
+    margin-bottom: 2.5rem;
+  }
+  .hero-stats {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 2.5rem;
+  }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-top: 0.2rem;
+  }
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-block;
+    padding: 0.7rem 1.8rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: all 0.25s;
+    cursor: pointer;
+  }
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    border: 1px solid var(--gold);
+  }
+  .btn-primary:hover { background: var(--gold-light); border-color: var(--gold-light); }
+  .btn-outline {
+    background: transparent;
+    color: var(--gold);
+    border: 1px solid var(--border);
+  }
+  .btn-outline:hover { border-color: var(--gold); background: rgba(201,168,76,0.05); }
+
+  /* ── SECTION COMMON ── */
+  section {
+    padding: 50px 5%;
+  }
+  .section-header {
+    margin-bottom: 1rem;
+  }
+  .section-tag {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .section-tag::before {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 1px;
+    background: var(--gold);
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 600;
+    color: var(--off-white);
+    line-height: 1.2;
+  }
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: var(--border-subtle);
+    margin: 0;
+  }
+
+  /* ── ABOUT ── */
+  #about { background: var(--navy-mid); padding-top: 25px; padding-bottom: 25px; }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+    margin-top: -0.5rem;
+  }
+  .about-text p {
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+    font-size: 0.90rem;
+  }
+  .about-highlights {
+    display: grid;
+    gap: 0.8rem;
+  }
+  .highlight-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--border-subtle);
+    border-left: 3px solid var(--gold);
+    padding: 0.8rem 1.1rem;
+    border-radius: 8px;
+    transition: background 0.2s;
+  }
+  .highlight-card:hover { background: rgba(201,168,76,0.04); }
+  .highlight-card h4 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.25rem;
+  }
+  .highlight-card p {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* ── EXPERIENCE ── */
+  #experience { background: var(--navy); }
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 8px; bottom: 8px;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+  }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+    animation: fadeUp 0.6s ease both;
+  }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2.43rem;
+    top: 8px;
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: var(--gold);
+    border: 2px solid var(--navy);
+    box-shadow: 0 0 0 3px rgba(201,168,76,0.2);
+  }
+  .exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+  }
+  .exp-role {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--off-white);
+  }
+  .exp-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--gold);
+    background: rgba(201,168,76,0.1);
+    padding: 0.2rem 0.7rem;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+  .exp-company {
+    font-size: 0.85rem;
+    color: var(--gold-light);
+    font-weight: 500;
+    margin-bottom: 1rem;
+    letter-spacing: 0.04em;
+  }
+  .exp-desc {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    line-height: 1.75;
+    margin-bottom: 1rem;
+  }
+  .exp-projects {
+    margin-top: 1rem;
+  }
+  .exp-projects h5 {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 0.7rem;
+  }
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .project-tag {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border-subtle);
+    padding: 0.25rem 0.7rem;
+    border-radius: 20px;
+    font-family: 'DM Mono', monospace;
+  }
+  .bullets {
+    list-style: none;
+    display: grid;
+    gap: 0.5rem;
+  }
+  .bullets li {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    padding-left: 1.2rem;
+    position: relative;
+    line-height: 1.65;
+  }
+  .bullets li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 1.1rem;
+    line-height: 1.3;
+  }
+
+  /* ── PROJECTS ── */
+  #projects { background: var(--navy-mid); }
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1.5rem;
+  }
+  .project-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--border-subtle);
+    border-top: 2px solid var(--gold);
+    padding: 1.8rem;
+    border-radius: 2px;
+    transition: transform 0.2s, background 0.2s;
+  }
+  .project-card:hover {
+    transform: translateY(-3px);
+    background: rgba(201,168,76,0.03);
+  }
+  .project-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+    letter-spacing: 0.1em;
+  }
+  .project-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--off-white);
+    margin-bottom: 0.3rem;
+  }
+  .project-client {
+    font-size: 0.78rem;
+    color: var(--gold-light);
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+  }
+  .project-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+  }
+  .project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 1rem;
+  }
+  .tech-badge {
+    font-size: 0.68rem;
+    font-family: 'DM Mono', monospace;
+    color: var(--gold);
+    background: rgba(201,168,76,0.08);
+    border: 1px solid rgba(201,168,76,0.2);
+    padding: 0.2rem 0.55rem;
+    border-radius: 20px;
+  }
+
+  /* ── SKILLS ── */
+  #skills { background: var(--navy); }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+  .skill-group {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--border-subtle);
+    padding: 1rem 1.2rem;
+    border-radius: 12px;
+  }
+  .skill-group-title {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.7rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .skill-pill {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border-subtle);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+  }
+
+  /* ── EDUCATION ── */
+  #education { background: var(--navy-mid); }
+  .edu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  .edu-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--border-subtle);
+    padding: 2rem;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+  }
+  .edu-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+  }
+  .edu-degree {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--off-white);
+    margin-bottom: 0.4rem;
+  }
+  .edu-school {
+    font-size: 0.85rem;
+    color: var(--gold-light);
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+  }
+  .edu-detail {
+    font-size: 0.83rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+  .publications-list {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .pub-item {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--border-subtle);
+    border-left: 3px solid rgba(201,168,76,0.4);
+    padding: 0.8rem 1.2rem;
+    border-radius: 12px;
+  }
+  .pub-type {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.3rem;
+  }
+  .pub-title {
+    font-size: 0.87rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+  .pub-journal {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    margin-top: 0.3rem;
+    font-style: italic;
+  }
+  .pub-category {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 2rem 0 0.8rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* ── AWARDS ── */
+  #awards { background: var(--navy); }
+  .awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+  .award-item {
+    display: flex;
+    gap: 0.8rem;
+    padding: 0.8rem 1rem;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    transition: background 0.2s;
+  }
+  .award-item:hover { background: rgba(201,168,76,0.03); }
+  .award-icon {
+    width: 30px; height: 30px;
+    flex-shrink: 0;
+    background: rgba(201,168,76,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+  }
+  .award-text h5 {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--off-white);
+    margin-bottom: 0.15rem;
+  }
+  .award-text p {
+    font-size: 0.72rem;
+    color: var(--text-dim);
+  }
+
+  /* ── CONTACT ── */
+  #contact {
+    background: var(--navy-mid);
+    text-align: center;
+  }
+  .contact-inner {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem 1.2rem;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border-subtle);
+    border-radius: 20px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: all 0.25s;
+  }
+  .contact-link:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(201,168,76,0.05);
+  }
+  .contact-link .icon { font-size: 1rem; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy);
+    border-top: 1px solid var(--border-subtle);
+    padding: 2rem 5%;
+    text-align: center;
+  }
+  footer p {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .fade-in { opacity: 1; transform: translateY(0); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .about-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .exp-header { flex-direction: column; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .awards-grid { grid-template-columns: 1fr; }
+    .edu-grid { grid-template-columns: 1fr; }
+
+    /* Fix hero layout — stack photo below stats on mobile */
+    #hero > div { flex-direction: column !important; }
+    #hero > div > div:last-child { margin-top: 1rem; }
+
+    /* Fix label wrapping */
+    .hero-label { white-space: normal !important; font-size: 0.65rem; }
+
+    /* Fix summary block */
+    .nav-links { display: none; }
+
+    /* Fix stats overflow */
+    .stat-num { font-size: 1.6rem; }
+    .stat-label { font-size: 0.62rem; }
+
+    /* Fix projects table on mobile */
+    #projects-compact table { font-size: 0.75rem; }
+    #projects-compact th:nth-child(4),
+    #projects-compact td:nth-child(4),
+    #projects-compact th:nth-child(5),
+    #projects-compact td:nth-child(5) { display: none; }
+
+    /* Reduce section padding */
+    section { padding: 30px 4%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#awards">Awards</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- CV SUMMARY HEADER -->
+<div style="background:var(--navy-mid); border-bottom:1px solid var(--border); padding:0.5rem 5%; padding-top:calc(64px + 0.5rem);">
+  <div style="max-width:1200px; margin:0 auto;">
+    <div style="display:flex; flex-wrap:wrap; align-items:baseline; gap:0.4rem 1.2rem; margin-bottom:0.3rem;">
+      <span style="font-family:'Playfair Display',serif; font-size:1rem; font-weight:600; color:var(--off-white);">Dr. Prathyusha Mekala</span>
+      <span style="color:var(--border); font-size:0.8rem;">|</span>
+      <span style="font-size:0.78rem; color:var(--gold);">EIT, PhD</span>
+      <span style="color:var(--border); font-size:0.8rem;">|</span>
+      <span style="font-size:0.78rem; color:var(--text-muted);">Principal Solution Consultant</span>
+      <span style="color:var(--border); font-size:0.8rem;">|</span>
+      <span style="font-size:0.78rem; color:var(--text-muted);">Petroleum Engineering · Flow Assurance · Topside Process Engineering</span>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; gap:0.3rem 1.2rem; margin-bottom:0.4rem;">
+      <span style="font-size:0.72rem; color:var(--text-dim);">📍 Arnhem, Netherlands</span>
+      <span style="font-size:0.72rem; color:var(--text-dim);">🛂 EU Blue Card</span>
+      <span style="font-size:0.72rem; color:var(--text-dim);">✉ prathyusha.mekala@outlook.com</span>
+      <a href="https://www.linkedin.com/in/prathyusha-mekala-b857339/" target="_blank" style="font-size:0.72rem; color:var(--gold); text-decoration:none;">💼 LinkedIn</a>
+    </div>
+    <p style="font-size:0.78rem; color:var(--text-muted); line-height:1.5; max-width:900px; margin:0;">
+      14+ years delivering integrated O&G solutions — production optimization, real-time PMS, digital twins, KOGNITWIN and flow assurance — for Aramco, ADNOC, PDO, Petronas, Equinor and ONGC.
+    </p>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-lines"></div>
+  <div style="position:relative; z-index:1; display:flex; align-items:center; justify-content:space-between; width:100%; gap:3rem;">
+  <div class="hero-content" style="flex:1;">
+    <div class="hero-label" style="white-space:nowrap;">O&G Consultant · Researcher · AI Innovator</div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">6</div>
+        <div class="stat-label">Journal Publications</div>
+      </div>
+      <div>
+        <div class="stat-num">11</div>
+        <div class="stat-label">Conference Papers</div>
+      </div>
+      <div>
+        <div class="stat-num">8</div>
+        <div class="stat-label">Major Projects</div>
+      </div>
+      <div>
+        <div class="stat-num">7</div>
+        <div class="stat-label">Global Clients</div>
+      </div>
+    </div>
+    <div class="hero-cta">
+      <a href="#experience" class="btn btn-primary">View Experience</a>
+      <a href="#contact" class="btn btn-outline">Get in Touch</a>
+    </div>
+  </div>
+  <div style="flex-shrink:0; display:flex; align-items:center; justify-content:center;">
+    <div style="width:160px; height:190px; border-radius:16px; overflow:hidden; border:3px solid rgba(201,168,76,0.4); box-shadow:0 8px 32px rgba(0,0,0,0.4);">
+      <img src="data:image/jpeg;base64,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" alt="Dr. Prathyusha Mekala" style="width:100%; height:100%; object-fit:cover; object-position:center top;">
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-header fade-in">
+    <div class="section-tag">About Me</div>
+    <h2 class="section-title">Industry-Leading Expertise<br>in Oil & Gas</h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-text fade-in">
+      <p>12+ years in O&G consulting across Petroleum Engineering, Flow Assurance, and Topside Process Engineering. Delivered production optimization and integrated upstream/topside solutions — OTS, real-time, PMS, KOGNITWIN, CCUS — for clients including Aramco, ADNOC, PDO, Petronas, Equinor, ONGC and RIL.</p>
+      <p>Provided technical consulting and sales support for LedaFlow, K-Spice and MySep, working with SLB, L&T Hydrocarbon Engineering, Kongsberg Digital, Weatherford and Kranji Solutions.</p>
+      <p>Independently conceived and delivered an AI proof-of-concept showcased at GasTech Europe. PhD from IIT Madras / NUS Singapore. MS from University of Nevada, Reno. EIT certified, Chemical Engineering.</p>
+    </div>
+    <div class="about-highlights fade-in" style="margin-top:-0.3rem;">
+      <div class="highlight-card">
+        <h4>Core Expertise</h4>
+        <p>Dynamic multiphase simulation, Flow Assurance, Production Management Systems (PMS), Digital Twins, Operator Training Simulators (OTS), Real-Time monitoring, and CCUS.</p>
+      </div>
+      <div class="highlight-card">
+        <h4>Software Mastery</h4>
+        <p>OLGA, LedaFlow, K-Spice, MySep, PIPESIM, HYSYS, PVTSIM, MULTIFLASH, Thermo-Calc, Python, MATLAB, CYGNET SCADA.</p>
+      </div>
+      <div class="highlight-card">
+        <h4>Global Reach</h4>
+        <p>Delivered projects for clients in Oman, Saudi Arabia, Malaysia, India, Norway, Canada, Australia, and more.</p>
+      </div>
+      <div class="highlight-card">
+        <h4>AI & Innovation</h4>
+        <p>Pioneered AI proof-of-concept for production separation, showcased at GasTech Conference Europe. Active collaborator in distributed computing, transactional ML and AI.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-header fade-in">
+    <div class="section-tag">Career History</div>
+    <h2 class="section-title">Work Experience</h2>
+  </div>
+  <div class="timeline">
+
+    <!-- I -->
+    <div class="timeline-item fade-in">
+      <div class="exp-header">
+        <div class="exp-role">Principal Solution Consultant</div>
+        <span class="exp-date">Mar 2025 – May 2026</span>
+      </div>
+      <div class="exp-company">Kranji Solutions, MySep · Netherlands</div>
+      <ul class="bullets">
+        <li>Independently conceived, pitched, and delivered an AI proof-of-concept showcased at GasTech Conference Europe. Collaborated with CEOs, directors and partners in distributed computing, transactional ML and AI.</li>
+        <li>Flow distribution checks via CFD studies and MySep software to analyse separator design performance.</li>
+        <li>Conducted hands-on product demos and design reviews for production separation facilities in MySep customer sales meetings.</li>
+        <li>Built strong customer relationships to drive business development; represented the company at technical exhibitions and conferences.</li>
+      </ul>
+    </div>
+
+    <!-- II -->
+    <div class="timeline-item fade-in">
+      <div class="exp-header">
+        <div class="exp-role">Senior Production Consultant (MENA)</div>
+        <span class="exp-date">Aug 2024 – Mar 2025</span>
+      </div>
+      <div class="exp-company">Weatherford</div>
+      <ul class="bullets">
+        <li>Production allocation workflow success criteria demonstration using CYGNET SCADA and FORESITE.</li>
+        <li>Scenario building for surface network model and demonstration of production enhancement in ESP wells.</li>
+      </ul>
+    </div>
+
+    <!-- III -->
+    <div class="timeline-item fade-in">
+      <div class="exp-header">
+        <div class="exp-role">Senior Flow Assurance & Process Engineer</div>
+        <span class="exp-date">Feb 2020 – Aug 2024</span>
+      </div>
+      <div class="exp-company">Kongsberg Digital</div>
+      <ul class="bullets">
+        <li>Led subsea modeling scope and mentored juniors; delivered real-time multiphase hydraulic models including PVT/fluid analysis, HMB benchmarking, and dynamic testing.</li>
+        <li>Aligned customer requirements with modeling solutions; supported pre-sales and technical consulting.</li>
+      </ul>
+      <div class="exp-projects">
+        <h5>Key Projects</h5>
+        <div class="project-tags">
+          <span class="project-tag">Shell – Ormen Lange (KOGNITWIN)</span>
+          <span class="project-tag">INEOS – AWI Auto What-If</span>
+          <span class="project-tag">Equinor – Krafla Noa Fulla (LCS)</span>
+          <span class="project-tag">ONGC – Nandasan PMS</span>
+          <span class="project-tag">LNGC Canada</span>
+          <span class="project-tag">Equinor – Oseberg (FS)</span>
+          <span class="project-tag">Equinor – Grane (OTS)</span>
+          <span class="project-tag">Equinor – Johan Sverdrup (OTS)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- IV -->
+    <div class="timeline-item fade-in">
+      <div class="exp-header">
+        <div class="exp-role">Flow Assurance SME</div>
+        <span class="exp-date">Dec 2018 – Feb 2020</span>
+      </div>
+      <div class="exp-company">L&T Hydrocarbon Engineering · Mumbai</div>
+      <ul class="bullets">
+        <li>Dynamic multiphase simulations and transient flow behavioral studies in pipelines.</li>
+        <li>Saudi Aramco – CRPO-27, 36, 37 Hasbah: technical operability studies, OLGA modeling of flowlines, Flow Assurance Design Basis, Steady State & Transient Analysis Reports, detailed Dynamic HIPS Study on a production well.</li>
+        <li>ONGC – Sagar Pragati / Cluster-8 (OLGA / HYSIS): Steady State hydraulic calculation reports for well fluid pipelines and gas lift pipelines in a greenfield.</li>
+      </ul>
+    </div>
+
+    <!-- V -->
+    <div class="timeline-item fade-in">
+      <div class="exp-header">
+        <div class="exp-role">Assistant Professor</div>
+        <span class="exp-date">2018</span>
+      </div>
+      <div class="exp-company">University of Petroleum & Energy Studies (UPES) · Dehradun</div>
+      <ul class="bullets">
+        <li>Instructor: Drilling Engineering & Well Completions, Production Engineering, Python.</li>
+        <li>Principal Investigator (PI): University research SEED Grant approved for "Phase Behavior Predictions for Pure and Binary Gas Semiclathrate Hydrates of TBAC, TBAF, TBANO3 Ionic Liquids."</li>
+      </ul>
+    </div>
+
+    <!-- VI -->
+    <div class="timeline-item fade-in">
+      <div class="exp-header">
+        <div class="exp-role">Petroleum Engineer Consultant</div>
+        <span class="exp-date">2014 – 2017</span>
+      </div>
+      <div class="exp-company">SLB (Schlumberger) · Pune & Oslo</div>
+      <ul class="bullets">
+        <li>Implemented OLGA Online Solutions for real-time pipeline, wellbore, and process simulations. Developed GUIs and advisor modules to predict and prevent Flow Assurance issues. Delivered Asset Optimization solutions using PMS, Avocet, PIPESIM and OLGA Online.</li>
+        <li>Saudi Aramco POSH Phase-I: developed OLGA Online systems for real-time monitoring and predictive flow assurance; built algorithms for model auto-calibration, virtual metering, water-cut estimation, ESP monitoring, water production surveillance, and alarms management.</li>
+        <li>PETRONAS Samarang IO: integrated wells, pipelines, topside, and downstream into OLGA models; PMS configuration and OPC integration via APIS Prediktor; developed HMI/GUI dashboards for surveillance, what-if planning, and look-ahead forecasting; full Flow Assurance studies and PMS testing.</li>
+        <li>INPEX Ichthys: PLMS scope implementation on OLGA model and HMI, verification, testing and reporting.</li>
+        <li>Yokogawa AlNasr OTS: prepared FDS and OLGA MAT procedures covering normal production, shut-down/cool-down, start-up, pigging, depressurisation, hydrate awareness, and slugging scenarios.</li>
+      </ul>
+      <div class="exp-projects">
+        <h5>Key Projects</h5>
+        <div class="project-tags">
+          <span class="project-tag">Saudi Aramco – POSH Phase-I (Avocet-PIPESIM)</span>
+          <span class="project-tag">PETRONAS – Samarang IO (OLGA Online)</span>
+          <span class="project-tag">INPEX – Ichthys PMS</span>
+          <span class="project-tag">Yokogawa – AlNasr OTS</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- VII -->
+    <div class="timeline-item fade-in">
+      <div class="exp-header">
+        <div class="exp-role">QA Engineer</div>
+        <span class="exp-date">2010</span>
+      </div>
+      <div class="exp-company">Chromalloy Gas Turbine Corp. LLC · USA</div>
+      <ul class="bullets">
+        <li>Investigated ceramic inclusions in gas turbine, aero-engine castings using microscopy and SEM (KEVEX, EDAX); compiled an inclusion database.</li>
+        <li>Updated manufacturing and QA Standard Operating Procedures (SOPs) within metallurgical limits.</li>
+      </ul>
+    </div>
+
+    <!-- VIII -->
+    <div class="timeline-item fade-in">
+      <div class="exp-header">
+        <div class="exp-role">Research Scholar – Chemical & Petroleum Engineering</div>
+        <span class="exp-date">2011 – 2014</span>
+      </div>
+      <div class="exp-company">IIT Madras & National University of Singapore (NUS) · Invited Research Scholar & Scholarship</div>
+      <ul class="bullets">
+        <li>Conducted kinetic studies on gas hydrate formation and dissociation in porous media at pilot plant scale, simulating unconventional gas-hydrate reservoir conditions.</li>
+        <li>Modelled phase equilibria of gas hydrates of natural gases (single and multicomponent) in the presence of promoters, inhibitors, and porous media.</li>
+        <li>Investigated CO₂ sequestration via hydrate formation — studied the effect of silica sand size on CO₂ hydrate kinetics in pure water and seawater.</li>
+        <li>Predicted phase stability of methane and CO₂ hydrates in porous media using thermodynamic models.</li>
+        <li>Authored and co-authored 4 peer-reviewed journal papers and 4 conference papers (SPE OTC Asia, ICGH, SPE NATC, PETROTECH) during this period.</li>
+        <li>Vice President, SPE-IIT Madras student chapter — organized industry tech talks and events (2012–2013).</li>
+        <li>Selected as acting representative of German research institute Forschungszentrum Jülich at the Indo-German Urban Mela (IGUM), Chennai (2012).</li>
+        <li>Invited lecturer: delivered O&G Industrial Flow Assurance lectures at IIT Madras (Jan 2018, post-PhD engagement).</li>
+      </ul>
+    </div>
+
+    <!-- IX -->
+    <div class="timeline-item fade-in">
+      <div class="exp-header">
+        <div class="exp-role">Research Assistant – Chemical & Materials Engineering</div>
+        <span class="exp-date">2007 – 2010</span>
+      </div>
+      <div class="exp-company">University of Nevada, Reno (UNR) · USA · Research & Teaching Scholarship</div>
+      <ul class="bullets">
+        <li>Computation and modelling of phase diagrams: modelled and simulated phase field boundaries of binary plastic crystals using THERMO-CALC; rigorous computation of Gibbs energy curves; optimised CALPHAD models against published experimental data.</li>
+        <li>Heterogeneous catalysis: designed in-house synthesised catalysts (Reverse-Micelle and Sol-Gel methods) to enhance SO₂ oxidation; performed reaction processes in a small-scale catalytic reactor and analysed gas by GC; characterised catalysts using XRD, SEM, TGA-DSC, Pulse Chemisorption, BET Physisorption, FTIR.</li>
+        <li>Teaching Assistant: Numerical Methods in Chemical Engineering.</li>
+        <li>DOE Hydrogen Program (Nov 2009, Salt Lake City, Utah): demonstrated modelling of the phase diagram of Li-H metal hydride as part of the DOE Annual Progress Report.</li>
+        <li>Co-authored 3 conference papers at TMS symposia (San Diego, Orlando, Seattle) on phase equilibrium and characterisation of thermal energy storage materials.</li>
+        <li>Inducted as member of Phi Kappa Phi Honor Society (USA), 2010.</li>
+        <li>Earned Engineer in Training (EIT) Certification in Chemical Engineering, Nevada State Board, 2009.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-header fade-in">
+    <div class="section-tag">Key Deliverables</div>
+    <h2 class="section-title">Notable Projects</h2>
+  </div>
+  <!-- Compact project list (default view) -->
+  <div id="projects-compact">
+    <table style="width:100%; border-collapse:collapse;">
+      <thead>
+        <tr style="border-bottom:1px solid var(--border);">
+          <th style="text-align:left; font-size:0.7rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-dim); padding:0 0 0.7rem 0; width:3%;">#</th>
+          <th style="text-align:left; font-size:0.7rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-dim); padding:0 0 0.7rem 1rem; width:30%;">Project</th>
+          <th style="text-align:left; font-size:0.7rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-dim); padding:0 0 0.7rem 1rem; width:25%;">Client</th>
+          <th style="text-align:left; font-size:0.7rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-dim); padding:0 0 0.7rem 1rem; width:20%;">Type</th>
+          <th style="text-align:left; font-size:0.7rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-dim); padding:0 0 0.7rem 1rem;">Tools</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:0.5px solid var(--border-subtle);">
+          <td style="padding:0.9rem 0; font-family:'DM Mono',monospace; font-size:0.72rem; color:var(--gold);">01</td>
+          <td style="padding:0.9rem 1rem; font-size:0.9rem; color:var(--off-white); font-weight:500;">Ormen Lange – Always On</td>
+          <td style="padding:0.9rem 1rem; font-size:0.82rem; color:var(--text-muted);">Shell | Kongsberg Digital</td>
+          <td style="padding:0.9rem 1rem; font-size:0.82rem; color:var(--text-muted);">KOGNITWIN Digital Twin</td>
+          <td style="padding:0.9rem 1rem;"><span class="tech-badge">LedaFlow</span> <span class="tech-badge">K-Spice</span></td>
+        </tr>
+        <tr style="border-bottom:0.5px solid var(--border-subtle);">
+          <td style="padding:0.9rem 0; font-family:'DM Mono',monospace; font-size:0.72rem; color:var(--gold);">02</td>
+          <td style="padding:0.9rem 1rem; font-size:0.9rem; color:var(--off-white); font-weight:500;">Nandasan PMS</td>
+          <td style="padding:0.9rem 1rem; font-size:0.82rem; color:var(--text-muted);">ONGC | Kongsberg Digital</td>
+          <td style="padding:0.9rem 1rem; font-size:0.82rem; color:var(--text-muted);">Production Mgmt System</td>
+          <td style="padding:0.9rem 1rem;"><span class="tech-badge">LedaFlow</span> <span class="tech-badge">K-Spice</span></td>
+        </tr>
+        <tr style="border-bottom:0.5px solid var(--border-subtle);">
+          <td style="padding:0.9rem 0; font-family:'DM Mono',monospace; font-size:0.72rem; color:var(--gold);">03</td>
+          <td style="padding:0.9rem 1rem; font-size:0.9rem; color:var(--off-white); font-weight:500;">POSH Phase-I</td>
+          <td style="padding:0.9rem 1rem; font-size:0.82rem; color:var(--text-muted);">Saudi Aramco | SLB</td>
+          <td style="padding:0.9rem 1rem; font-size:0.82rem; color:var(--text-muted);">Asset Optimization</td>
+          <td style="padding:0.9rem 1rem;"><span class="tech-badge">Avocet</span> <span class="tech-badge">PIPESIM</span></td>
+        </tr>
+        <tr style="border-bottom:0.5px solid var(--border-subtle);">
+          <td style="padding:0.9rem 0; font-family:'DM Mono',monospace; font-size:0.72rem; color:var(--gold);">04</td>
+          <td style="padding:0.9rem 1rem; font-size:0.9rem; color:var(--off-white); font-weight:500;">Samarang IO</td>
+          <td style="padding:0.9rem 1rem; font-size:0.82rem; color:var(--text-muted);">PETRONAS | SLB</td>
+          <td style="padding:0.9rem 1rem; font-size:0.82rem; color:var(--text-muted);">Online Monitoring PMS</td>
+          <td style="padding:0.9rem 1rem;"><span class="tech-badge">OLGA Online</span> <span class="tech-badge">HMI</span></td>
+        </tr>
+        <tr style="border-bottom:0.5px solid var(--border-subtle);">
+          <td style="padding:0.9rem 0; font-family:'DM Mono',monospace; font-size:0.72rem; color:var(--gold);">05</td>
+          <td style="padding:0.9rem 1rem; font-size:0.9rem; color:var(--off-white); font-weight:500;">Krafla Noa Fulla</td>
+          <td style="padding:0.9rem 1rem; font-size:0.82rem; color:var(--text-muted);">Equinor | Kongsberg Digital</td>
+          <td style="padding:0.9rem 1rem; font-size:0.82rem; color:var(--text-muted);">Life Cycle Simulation</td>
+          <td style="padding:0.9rem 1rem;"><span class="tech-badge">LedaFlow</span> <span class="tech-badge">K-Spice</span></td>
+        </tr>
+        <tr style="border-bottom:0.5px solid var(--border-subtle);">
+          <td style="padding:0.9rem 0; font-family:'DM Mono',monospace; font-size:0.72rem; color:var(--gold);">06</td>
+          <td style="padding:0.9rem 1rem; font-size:0.9rem; color:var(--off-white); font-weight:500;">Johan Sverdrup & Grane</td>
+          <td style="padding:0.9rem 1rem; font-size:0.82rem; color:var(--text-muted);">Equinor | Kongsberg Digital</td>
+          <td style="padding:0.9rem 1rem; font-size:0.82rem; color:var(--text-muted);">Operator Training Simulator</td>
+          <td style="padding:0.9rem 1rem;"><span class="tech-badge">LedaFlow</span> <span class="tech-badge">OTS</span></td>
+        </tr>
+        <tr style="border-bottom:0.5px solid var(--border-subtle);">
+          <td style="padding:0.9rem 0; font-family:'DM Mono',monospace; font-size:0.72rem; color:var(--gold);">07</td>
+          <td style="padding:0.9rem 1rem; font-size:0.9rem; color:var(--off-white); font-weight:500;">AI Model – Production Separation</td>
+          <td style="padding:0.9rem 1rem; font-size:0.82rem; color:var(--text-muted);">Kranji Solutions</td>
+          <td style="padding:0.9rem 1rem; font-size:0.82rem; color:var(--text-muted);">AI Proof-of-Concept</td>
+          <td style="padding:0.9rem 1rem;"><span class="tech-badge">MySep</span> <span class="tech-badge">AI/ML</span></td>
+        </tr>
+        <tr>
+          <td style="padding:0.9rem 0; font-family:'DM Mono',monospace; font-size:0.72rem; color:var(--gold);">08</td>
+          <td style="padding:0.9rem 1rem; font-size:0.9rem; color:var(--off-white); font-weight:500;">Hasbah CRPO-27, 36, 37</td>
+          <td style="padding:0.9rem 1rem; font-size:0.82rem; color:var(--text-muted);">Saudi Aramco | L&T</td>
+          <td style="padding:0.9rem 1rem; font-size:0.82rem; color:var(--text-muted);">Flow Assurance Study</td>
+          <td style="padding:0.9rem 1rem;"><span class="tech-badge">OLGA</span> <span class="tech-badge">HIPS</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="margin-top:1.5rem;">
+      <button onclick="document.getElementById('projects-compact').style.display='none'; document.getElementById('projects-full').style.display='block';"
+        style="background:transparent; border:1px solid var(--border); color:var(--gold); font-size:0.78rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; padding:0.6rem 1.4rem; cursor:pointer; border-radius:2px;">
+        + View full project details
+      </button>
+    </div>
+  </div>
+
+  <!-- Full project cards (hidden by default) -->
+  <div id="projects-full" style="display:none;">
+    <div style="margin-bottom:1.5rem;">
+      <button onclick="document.getElementById('projects-full').style.display='none'; document.getElementById('projects-compact').style.display='block';"
+        style="background:transparent; border:1px solid var(--border); color:var(--gold); font-size:0.78rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; padding:0.6rem 1.4rem; cursor:pointer; border-radius:2px;">
+        − Compact view
+      </button>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card fade-in">
+        <div class="project-num">01 · KOGNITWIN Digital Twin</div>
+        <div class="project-name">Ormen Lange – Always On</div>
+        <div class="project-client">Shell | Kongsberg Digital</div>
+        <div class="project-desc">Lead project for subsea condensate gas well network, pipeline, and subsea compressor integration to topside facilities. Well modeling for Forcheimer, Backflow and Linear IPRs. HMB benchmarking and dynamic testing with subsea compression scenarios. Auto model calibration.</div>
+        <div class="project-tech"><span class="tech-badge">LedaFlow</span><span class="tech-badge">K-Spice</span><span class="tech-badge">KOGNITWIN</span></div>
+      </div>
+      <div class="project-card fade-in">
+        <div class="project-num">02 · PMS – Production Management System</div>
+        <div class="project-name">Nandasan PMS</div>
+        <div class="project-client">ONGC | Kongsberg Digital</div>
+        <div class="project-desc">Delivered full Production Management System with Real-Time and Look-Ahead timelines for monitoring Corrosion, Erosion, Lead detection, Wax deposition, and Virtual Flow Metering. Covered all onshore wells and topside facilities. DCS integration, MAT/FAT, operator training.</div>
+        <div class="project-tech"><span class="tech-badge">LedaFlow</span><span class="tech-badge">K-Spice</span><span class="tech-badge">DCS Integration</span></div>
+      </div>
+      <div class="project-card fade-in">
+        <div class="project-num">03 · Integrated Asset Optimization</div>
+        <div class="project-name">POSH Phase-I</div>
+        <div class="project-client">Saudi Aramco | Schlumberger</div>
+        <div class="project-desc">Developed OLGA Online systems for real-time monitoring and predictive flow assurance. Built algorithms for model auto-calibration, virtual metering, and production optimization. Implemented alarms management for the production management platform.</div>
+        <div class="project-tech"><span class="tech-badge">Avocet</span><span class="tech-badge">PIPESIM</span><span class="tech-badge">OLGA Online</span></div>
+      </div>
+      <div class="project-card fade-in">
+        <div class="project-num">04 · Integrated Online Monitoring</div>
+        <div class="project-name">Samarang IO</div>
+        <div class="project-client">PETRONAS | Schlumberger</div>
+        <div class="project-desc">Wells, pipelines, topside, and downstream network integrated into OLGA models with calibration using test data. PMS configuration and OPC integration via APIS Prediktor. Developed HMI and GUI dashboards for real-time surveillance, what-if planning, and look-ahead forecasting. Conducted full Flow Assurance studies and PMS testing.</div>
+        <div class="project-tech"><span class="tech-badge">OLGA Online</span><span class="tech-badge">OPC</span><span class="tech-badge">HMI</span></div>
+      </div>
+      <div class="project-card fade-in">
+        <div class="project-num">05 · Life Cycle Simulation</div>
+        <div class="project-name">Krafla Noa Fulla (LCS)</div>
+        <div class="project-client">Equinor | Kongsberg Digital</div>
+        <div class="project-desc">Modeled subsea gas lift wells, naturally flowing wells, and multiphase flowline networks. K-Spice integration, well model tuning to production life cycle, steady state and transient scenario testing. Auto model tuning.</div>
+        <div class="project-tech"><span class="tech-badge">LedaFlow</span><span class="tech-badge">K-Spice</span></div>
+      </div>
+      <div class="project-card fade-in">
+        <div class="project-num">06 · Operator Training Simulator</div>
+        <div class="project-name">Johan Sverdrup & Grane OTS</div>
+        <div class="project-client">Equinor | Kongsberg Digital</div>
+        <div class="project-desc">Subsea lift gas and naturally flowing wells modeling, flowline network modeling, auto model tuning. Simulation of topside scope including Nitrogen, Diesel, Seawater and Relief systems.</div>
+        <div class="project-tech"><span class="tech-badge">LedaFlow</span><span class="tech-badge">K-Spice</span><span class="tech-badge">OTS</span></div>
+      </div>
+      <div class="project-card fade-in">
+        <div class="project-num">07 · AI Proof-of-Concept</div>
+        <div class="project-name">AI Model for Production Separation</div>
+        <div class="project-client">Kranji Solutions | GasTech Europe</div>
+        <div class="project-desc">Independently conceived, designed and delivered an AI proof-of-concept for production separation optimization. Showcased at GasTech Conference Europe. Integrates distributed computing and transactional ML/AI.</div>
+        <div class="project-tech"><span class="tech-badge">MySep</span><span class="tech-badge">AI/ML</span><span class="tech-badge">CFD</span></div>
+      </div>
+      <div class="project-card fade-in">
+        <div class="project-num">08 · Flow Assurance Study</div>
+        <div class="project-name">Hasbah CRPO-27, 36, 37</div>
+        <div class="project-client">Saudi Aramco | L&T Hydrocarbon</div>
+        <div class="project-desc">Technical studies assessing system operability. OLGA modeling and simulation of flowlines. Flow Assurance Design Basis, Steady State and Transient Analysis Reports. Detailed Dynamic HIPS Study on a production well.</div>
+        <div class="project-tech"><span class="tech-badge">OLGA</span><span class="tech-badge">HIPS Study</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-header fade-in">
+    <div class="section-tag">Technical Proficiencies</div>
+    <h2 class="section-title">Skills & Software</h2>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-group fade-in">
+      <div class="skill-group-title">Digital Oil Field Platforms</div>
+      <div class="skill-list">
+        <span class="skill-pill">KOGNITWIN</span>
+        <span class="skill-pill">FORESITE</span>
+        <span class="skill-pill">AVOCET PMS</span>
+      </div>
+    </div>
+    <div class="skill-group fade-in">
+      <div class="skill-group-title">Dynamic Process Simulation</div>
+      <div class="skill-list">
+        <span class="skill-pill">HYSYS Dynamics</span>
+        <span class="skill-pill">K-Spice</span>
+        <span class="skill-pill">CFD</span>
+      </div>
+    </div>
+    <div class="skill-group fade-in">
+      <div class="skill-group-title">Petroleum Engineering</div>
+      <div class="skill-list">
+        <span class="skill-pill">OLGA</span>
+        <span class="skill-pill">PIPESIM</span>
+        <span class="skill-pill">LedaFlow</span>
+        <span class="skill-pill">MySep</span>
+        <span class="skill-pill">GAP PROSPER</span>
+        <span class="skill-pill">WELLFLOW</span>
+      </div>
+    </div>
+    <div class="skill-group fade-in">
+      <div class="skill-group-title">Thermodynamics</div>
+      <div class="skill-list">
+        <span class="skill-pill">Thermo-Calc</span>
+        <span class="skill-pill">MULTIFLASH</span>
+        <span class="skill-pill">PVTSIM</span>
+      </div>
+    </div>
+    <div class="skill-group fade-in">
+      <div class="skill-group-title">Programming & Computation</div>
+      <div class="skill-list">
+        <span class="skill-pill">Python</span>
+        <span class="skill-pill">MATLAB</span>
+        <span class="skill-pill">C</span>
+        <span class="skill-pill">MathCAD</span>
+        <span class="skill-pill">Sigma Plot</span>
+      </div>
+    </div>
+    <div class="skill-group fade-in">
+      <div class="skill-group-title">SCADA & Control</div>
+      <div class="skill-list">
+        <span class="skill-pill">CYGNET SCADA</span>
+        <span class="skill-pill">DCS Integration</span>
+        <span class="skill-pill">HMI Configuration</span>
+        <span class="skill-pill">OPC Integration</span>
+      </div>
+    </div>
+    <div class="skill-group fade-in">
+      <div class="skill-group-title">Domain Expertise</div>
+      <div class="skill-list">
+        <span class="skill-pill">Flow Assurance</span>
+        <span class="skill-pill">PVT Analysis</span>
+        <span class="skill-pill">Digital Twins</span>
+        <span class="skill-pill">Operator Training Simulators</span>
+        <span class="skill-pill">Production Optimization</span>
+        <span class="skill-pill">CCUS</span>
+        <span class="skill-pill">Real-Time Monitoring</span>
+        <span class="skill-pill">Techno Sales</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="section-header fade-in">
+    <div class="section-tag">Academic Background</div>
+    <h2 class="section-title">Education & Research</h2>
+  </div>
+  <div class="edu-grid">
+    <div class="edu-card fade-in">
+      <div class="edu-degree">PhD – Research Scholar</div>
+      <div class="edu-school">IIT Madras & NUS Singapore · 2011–2014</div>
+      <div class="edu-detail">Chemical & Petroleum Engineering. Kinetic studies on gas hydrate formation/dissociation in porous media. Modeling phase equilibria of gas hydrates in the presence of promoters, inhibitors and porous media.</div>
+    </div>
+    <div class="edu-card fade-in">
+      <div class="edu-degree">MS – Chemical & Materials Science Engineering</div>
+      <div class="edu-school">University of Nevada, Reno (UNR) · 2007–2010</div>
+      <div class="edu-detail">Research: Computation & Modeling of Phase Diagrams (THERMO-CALC/CALPHAD), Heterogeneous Catalysis. Teaching Assistant: Numerical Methods in Chemical Engineering.</div>
+    </div>
+    <div class="edu-card fade-in">
+      <div class="edu-degree">BTech – Chemical Engineering</div>
+      <div class="edu-school">Osmania University, Hyderabad</div>
+      <div class="edu-detail">Foundation in chemical engineering principles. District Topper in 10+2 Examination (June 1999).</div>
+    </div>
+  </div>
+
+  <div class="section-header fade-in" style="margin-top:3rem; margin-bottom:1.5rem;">
+    <div class="section-tag">Academic Output</div>
+    <h3 style="font-family:'Playfair Display',serif; font-size:1.4rem; color:var(--off-white);">Key Publications</h3>
+  </div>
+
+  <div class="publications-list">
+    <div class="pub-item fade-in">
+      <div class="pub-type">Journal · J. Pet. Sci. Eng. · 2014</div>
+      <div class="pub-title"><strong>Mekala P</strong>, Busch M, Patel R, Mech D, Sangwai JS. Effect of Silica Sand Size on the Formation Kinetics of CO₂ Hydrate in Porous Media in the Presence of Pure Water and Seawater Relevant for CO₂ Sequestration.</div>
+    </div>
+    <div class="pub-item fade-in">
+      <div class="pub-type">Journal · Energy & Fuels, 28(4), 2708–2716 · 2014</div>
+      <div class="pub-title"><strong>Mekala P</strong>, Babu P, Sangwai JS, & Linga P. Formation and Dissociation Kinetics of Methane Hydrates in Seawater and Silica Sand.</div>
+    </div>
+    <div class="pub-item fade-in">
+      <div class="pub-type">Journal · J. Pet. Sci. Eng. 116, 81–89 · 2014</div>
+      <div class="pub-title"><strong>Mekala P</strong>, Sangwai JS. Prediction of Phase Equilibrium of Clathrate Hydrates of Multicomponent Natural Gases Containing CO₂ and H₂S.</div>
+    </div>
+    <div class="pub-item fade-in">
+      <div class="pub-type">Journal · J. Nat. Gas Sci. & Eng. 18, 254–262 · 2014</div>
+      <div class="pub-title">Barmavat T, <strong>Mekala P</strong>, Sangwai JS. Prediction of Phase Stability Conditions of Gas Hydrates of Methane and CO₂ in Porous Media.</div>
+    </div>
+    <div class="pub-item fade-in">
+      <div class="pub-type">Conference · ICGH 2014 · Beijing</div>
+      <div class="pub-title"><strong>Mekala P</strong>, Sangwai JS, Linga P. Formation and Dissociation Kinetics of Methane Hydrates in Seawater and Silica Sand.</div>
+    </div>
+    <div class="pub-item fade-in">
+      <div class="pub-type">Conference · SPE OTC Asia 2014 · OTC-24674-MS · Kuala Lumpur</div>
+      <div class="pub-title"><strong>Mekala P</strong>, Sangwai JS. Accurate Phase Equilibria Predictions for Hydrates of Multi-component Natural Gases.</div>
+    </div>
+    <div class="pub-item fade-in">
+      <div class="pub-type">Conference · SPE NATC 2013 · doi: 10.2118/164578-MS · Cairo</div>
+      <div class="pub-title"><strong>Mekala P</strong>, Sangwai JS. Accurate Prediction of Dissociation Pressures of Natural Gas Hydrates Containing CO₂ and H₂S for Efficient Flow Assurance.</div>
+    </div>
+    <div class="pub-item fade-in">
+      <div class="pub-type">Conference · PETROTECH 2012 · Delhi</div>
+      <div class="pub-title">Sangwai JS, <strong>Mekala P</strong>, Godishala KK. Carbondioxide Sequestration: Understanding its Stability at Reservoir Conditions.</div>
+    </div>
+  </div>
+
+  <div style="margin-top:1.5rem;">
+    <button onclick="var el=document.getElementById('full-pubs'); el.style.display=el.style.display==='none'?'block':'none'; this.textContent=el.style.display==='none'?'+ View all 18 publications':'− Hide full list';"
+      style="background:transparent; border:1px solid var(--border); color:var(--gold); font-size:0.78rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; padding:0.6rem 1.4rem; cursor:pointer; border-radius:2px;">
+      + View all 18 publications
+    </button>
+  </div>
+
+  <div id="full-pubs" style="display:none; margin-top:1.5rem;">
+    <h4 class="pub-category">Book Chapter</h4>
+    <div class="publications-list">
+      <div class="pub-item">
+        <div class="pub-type">Book Chapter · 2012</div>
+        <div class="pub-title">Chien WM, Gantan I, Mishra A, Chandra D, Kamisetty VK, and <strong>Mekala P.</strong> Phase Equilibrium and Characterization Studies of Binary Organic Thermal Energy Storage Materials.</div>
+        <div class="pub-journal">T.T. Chen Honorary Symposium — John Wiley & Sons · doi: 10.1002/9781118364833.ch41</div>
+      </div>
+    </div>
+    <h4 class="pub-category">All Journal Publications</h4>
+    <div class="publications-list">
+      <div class="pub-item"><div class="pub-type">Journal · 1 · Calphad 50, 126–133 · 2015</div><div class="pub-title"><strong>Mekala P</strong>, Kamisetty V, Chien W-M et al. Thermodynamic Modeling of binary phase diagram of 2-Amino-2-Methyl-1,3-Propanediol and Tris(Hydroxymethyl)Aminomethane System.</div></div>
+      <div class="pub-item"><div class="pub-type">Journal · 2 · J. Pet. Sci. Eng. · 2014</div><div class="pub-title"><strong>Mekala P</strong>, Busch M, Patel R, Mech D, Sangwai JS. Effect of Silica Sand Size on CO₂ Hydrate Formation Kinetics in Porous Media.</div></div>
+      <div class="pub-item"><div class="pub-type">Journal · 3 · Energy & Fuels 28(4) · 2014</div><div class="pub-title"><strong>Mekala P</strong>, Babu P, Sangwai JS, Linga P. Formation and Dissociation Kinetics of Methane Hydrates in Seawater and Silica Sand.</div></div>
+      <div class="pub-item"><div class="pub-type">Journal · 4 · J. Pet. Sci. Eng. 116 · 2014</div><div class="pub-title"><strong>Mekala P</strong>, Sangwai JS. Prediction of Phase Equilibrium of Clathrate Hydrates of Multicomponent Natural Gases Containing CO₂ and H₂S.</div></div>
+      <div class="pub-item"><div class="pub-type">Journal · 5 · J. Nat. Gas Sci. Eng. 18 · 2014</div><div class="pub-title">Barmavat T, <strong>Mekala P</strong>, Sangwai JS. Prediction of Phase Stability Conditions of Gas Hydrates of CH₄ and CO₂ in Porous Media.</div></div>
+      <div class="pub-item"><div class="pub-type">Journal · 6 · J. Nat. Gas Chemistry 21(4) · 2012</div><div class="pub-title">Joshi A, <strong>Mekala P</strong>, Sangwai JS. Modeling Phase Equilibria of Semiclathrate Hydrates of CH₄, CO₂ and N₂ in TBAB Solution.</div></div>
+    </div>
+    <h4 class="pub-category">All Conference Proceedings</h4>
+    <div class="publications-list">
+      <div class="pub-item"><div class="pub-type">ICGH 2014 · Beijing</div><div class="pub-title"><strong>Mekala P</strong>, Sangwai JS, Linga P. Formation and Dissociation Kinetics of Methane Hydrates in Seawater and Silica Sand.</div></div>
+      <div class="pub-item"><div class="pub-type">SPE OTC Asia 2014 · OTC-24674-MS · Kuala Lumpur</div><div class="pub-title"><strong>Mekala P</strong>, Sangwai JS. Accurate Phase Equilibria Predictions for Hydrates of Multi-component Natural Gases.</div></div>
+      <div class="pub-item"><div class="pub-type">HYDRO 2013 · Chennai</div><div class="pub-title">Sangwai JS, Patel RS, <strong>Mekala P</strong> et al. Desalination of Seawater using Gas Hydrates Technology.</div></div>
+      <div class="pub-item"><div class="pub-type">SPE NATC 2013 · Cairo · doi: 10.2118/164578-MS</div><div class="pub-title"><strong>Mekala P</strong>, Sangwai JS. Accurate Prediction of Dissociation Pressures of Natural Gas Hydrates for Flow Assurance.</div></div>
+      <div class="pub-item"><div class="pub-type">ICDT 2012 · Chennai</div><div class="pub-title"><strong>Mekala P</strong>, Sangwai JS. Predictability of EoS-based Gas Hydrate Models for Single and Multi-component Gas Mixtures.</div></div>
+      <div class="pub-item"><div class="pub-type">PETROTECH 2012 · Delhi</div><div class="pub-title">Sangwai JS, <strong>Mekala P</strong>, Godishala KK. CO₂ Sequestration: Understanding its Stability at Reservoir Conditions.</div></div>
+      <div class="pub-item"><div class="pub-type">CoMet 2012 · Pala</div><div class="pub-title"><strong>Mekala P</strong>, Sangwai JS. Thermodynamic Modeling of Pure and Binary Gas Mixture Hydrates.</div></div>
+      <div class="pub-item"><div class="pub-type">TMS 2013 · San Antonio</div><div class="pub-title">Chien WM, Gantan I, Mishra A, Chandra D, Kamisetty VK, <strong>Mekala P</strong>. Phase Equilibrium Studies of Pentaglycerol, TRIS and AMPL Ternary Systems.</div></div>
+      <div class="pub-item"><div class="pub-type">TMS 2012 · Orlando</div><div class="pub-title">Chien WM, Gantan I, Mishra A, Chandra D, Kamisetty VK, <strong>Mekala P</strong>. Phase Equilibrium of Binary Organic Thermal Energy Storage Materials.</div></div>
+      <div class="pub-item"><div class="pub-type">TMS 2011 · San Diego</div><div class="pub-title">Chien WM, Kamisetty VK, <strong>Mekala P</strong>, Chandra D. High Temperature XRD Characterisation of Thermal Energy Storage Materials.</div></div>
+      <div class="pub-item"><div class="pub-type">MS&T 2010 · Seattle</div><div class="pub-title">Chien WM, Kamisetty VK, <strong>Mekala P</strong>, Chandra D. Phase Diagram Studies on TRIS and AMPL Binary Thermal Energy Storage System.</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- AWARDS -->
+<section id="awards">
+  <div class="section-header fade-in">
+    <div class="section-tag">Recognition</div>
+    <h2 class="section-title">Awards & Honors</h2>
+  </div>
+  <div class="awards-grid">
+    <div class="award-item fade-in">
+      <div class="award-icon">🏆</div>
+      <div class="award-text">
+        <h5>Spotlight Award</h5>
+        <p>Kongsberg Digital · 2023</p>
+      </div>
+    </div>
+    <div class="award-item fade-in">
+      <div class="award-icon">⭐</div>
+      <div class="award-text">
+        <h5>Outstanding Performance Award</h5>
+        <p>Kongsberg Digital · 2022</p>
+      </div>
+    </div>
+    <div class="award-item fade-in">
+      <div class="award-icon">🥇</div>
+      <div class="award-text">
+        <h5>PbS Gold Team Award – ARAMCO POSH PMS</h5>
+        <p>Schlumberger · Aug 2015</p>
+      </div>
+    </div>
+    <div class="award-item fade-in">
+      <div class="award-icon">🏅</div>
+      <div class="award-text">
+        <h5>Chairman's Team Award – Samarang IO OLGA</h5>
+        <p>Schlumberger · Jan 2016</p>
+      </div>
+    </div>
+    <div class="award-item fade-in">
+      <div class="award-icon">🔬</div>
+      <div class="award-text">
+        <h5>Invited Research Scholar & Scholarship</h5>
+        <p>National University of Singapore · 2013–2014</p>
+      </div>
+    </div>
+    <div class="award-item fade-in">
+      <div class="award-icon">🎓</div>
+      <div class="award-text">
+        <h5>Scholarship & Certificate of Excellence – SPE IIT</h5>
+        <p>Awarded by ONGC at SPE IIT Event · Aug 2013</p>
+      </div>
+    </div>
+    <div class="award-item fade-in">
+      <div class="award-icon">🏫</div>
+      <div class="award-text">
+        <h5>Core Judge – Innovation '18</h5>
+        <p>ADCET Engineering College, Ashta · Oct 2018</p>
+      </div>
+    </div>
+    <div class="award-item fade-in">
+      <div class="award-icon">🎤</div>
+      <div class="award-text">
+        <h5>Invited Lecturer – Production Flow Assurance</h5>
+        <p>IIT Madras · Jan 2018</p>
+      </div>
+    </div>
+    <div class="award-item fade-in">
+      <div class="award-icon">⚗️</div>
+      <div class="award-text">
+        <h5>Phase Diagram Demonstration – DOE Hydrogen Program</h5>
+        <p>Li-H Metal Hydride · Salt Lake City, Utah, USA · Nov 2009</p>
+      </div>
+    </div>
+    <div class="award-item fade-in">
+      <div class="award-icon">🌐</div>
+      <div class="award-text">
+        <h5>Vice President – SPE IIT Madras Student Chapter</h5>
+        <p>Organized tech talks with industry SMEs · 2012–2013</p>
+      </div>
+    </div>
+    <div class="award-item fade-in">
+      <div class="award-icon">🇩🇪</div>
+      <div class="award-text">
+        <h5>Acting Representative – Forschungszentrum Jülich</h5>
+        <p>Indo-German Urban Mela (IGUM) · Chennai, India · 2012</p>
+      </div>
+    </div>
+    <div class="award-item fade-in">
+      <div class="award-icon">Φ</div>
+      <div class="award-text">
+        <h5>Inducted Member, Phi Kappa Phi Honor Society</h5>
+        <p>USA · 2010</p>
+      </div>
+    </div>
+    <div class="award-item fade-in">
+      <div class="award-icon">📚</div>
+      <div class="award-text">
+        <h5>Research & Teaching Scholarship</h5>
+        <p>University of Nevada, Reno · 2007–2010</p>
+      </div>
+    </div>
+    <div class="award-item fade-in">
+      <div class="award-icon">🏫</div>
+      <div class="award-text">
+        <h5>District Topper – 10+2 Examination</h5>
+        <p>June 1999</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-header fade-in" style="margin-top:3.5rem; margin-bottom:1.5rem;">
+    <div class="section-tag">Certifications</div>
+  </div>
+  <div class="awards-grid">
+    <div class="award-item fade-in">
+      <div class="award-icon">📋</div>
+      <div class="award-text">
+        <h5>Engineer in Training (EIT) – Chemical Engineering</h5>
+        <p>Nevada State Board, USA · 2009</p>
+      </div>
+    </div>
+    <div class="award-item fade-in">
+      <div class="award-icon">🔧</div>
+      <div class="award-text">
+        <h5>OLGA-ONLINE Training</h5>
+        <p>Oslo, Norway</p>
+      </div>
+    </div>
+    <div class="award-item fade-in">
+      <div class="award-icon">🌊</div>
+      <div class="award-text">
+        <h5>Advanced OLGA Multiphase Flow Simulator</h5>
+        <p>Gatwick, UK</p>
+      </div>
+    </div>
+    <div class="award-item fade-in">
+      <div class="award-icon">🧪</div>
+      <div class="award-text">
+        <h5>Development of Thermodynamic Databases</h5>
+        <p>THERMO-CALC / CALPHAD · Penn State, USA</p>
+      </div>
+    </div>
+    <div class="award-item fade-in">
+      <div class="award-icon">📡</div>
+      <div class="award-text">
+        <h5>CYGNET SCADA Certified</h5>
+        <p>Weatherford · 2024</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="section-header fade-in" style="text-align:center;">
+      <div class="section-tag" style="justify-content:center;">Get in Touch</div>
+      <h2 class="section-title">Contact</h2>
+      <p style="color:var(--text-muted); margin-top:1rem; font-size:0.95rem;">Open to consulting engagements, speaking opportunities, and industry collaborations.</p>
+    </div>
+    <div class="contact-links fade-in">
+      <a href="mailto:prathyusha.mekala@outlook.com" class="contact-link">
+        <span class="icon">✉</span> prathyusha.mekala@outlook.com
+      </a>
+      <a href="https://www.linkedin.com/in/prathyusha-mekala-b857339/" target="_blank" class="contact-link">
+        <span class="icon">💼</span> LinkedIn Profile
+      </a>
+      <a href="#" class="contact-link">
+        <span class="icon">📍</span> Arnhem, Netherlands
+      </a>
+      <a href="#" class="contact-link">
+        <span class="icon">🛂</span> EU 
